@@ -1,0 +1,16 @@
+{
+  "id": "demo_001",
+  "inputs": {
+    "user": "What was the closing price of AAPL between 2024-01-01 and 2024-01-31?",
+    "tools": [
+      {"name": "get_price_yahoo", "description": "Yahoo price lookup", "parameters": {"type":"object"}}
+    ]
+  },
+  "dialogue": [
+    {"role":"assistant","type":"action","content":"{\"tool\":\"get_price_yahoo\",\"arguments\":{\"symbol\":\"AAPL\",\"start\":\"2024-01-01\",\"end\":\"2024-01-31\"}}"},
+    {"role":"env","type":"observation","content":"<obs omitted in offline replay; simulator produces it>"},
+    {"role":"assistant","type":"final","content":"195.42"}
+  ],
+  "gold_final": {"numeric": 195.42, "tol": 0.0},
+  "meta": {"source":"synthetic"}
+}
