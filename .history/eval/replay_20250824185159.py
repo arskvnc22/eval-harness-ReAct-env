@@ -46,7 +46,7 @@ def score_final(final_text: str, gold: Dict[str, Any]) -> float:
 
 def replay_dialogue(dialogue: List[Dict[str, Any]], gold_final: Dict[str, Any], max_steps: int = 8) -> Dict[str, Any]:
     """
-    dialogue: list of events;  inject the model's outputs when running live.
+    dialogue: list of events; you inject the model's outputs when running live.
     Here we assume 'action' entries contain JSON strings; 'final' is the model's final answer string.
     """
     track2 = {"steps": [], "invalid_calls": 0, "constraint_violations": 0}
